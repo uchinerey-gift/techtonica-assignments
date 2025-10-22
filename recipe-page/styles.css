@@ -38,3 +38,26 @@ li.line-through::after {
     font-weight: 700;
     margin-left: 6px;
 }
+@media print {
+
+    nav,
+    #back-to-top,
+    button {
+        display: none !important;
+    }
+
+    body {
+        background: #fff;
+        color: #000;
+    }
+
+    .list-group-item {
+        border: none;
+        padding-left: 0;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+        font-size: 0.9em;
+    }
+}
