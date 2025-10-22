@@ -77,3 +77,11 @@ function restoreChecked() {
 
 restoreChecked();
 updateCount && updateCount();
+
+function updateCount() {
+    const total = document.querySelectorAll('#ingredients-list li').length;
+    const done = document.querySelectorAll('#ingredients-list li.line-through').length;
+    const el = document.getElementById('ing-count');
+    if (el) el.textContent = `Completed ${done} of ${total} ingredients`;
+}
+updateCount();
