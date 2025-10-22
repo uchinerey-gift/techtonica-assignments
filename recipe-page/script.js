@@ -15,3 +15,33 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
+
+const addBtn = document.getElementById('add-ing');
+const ingList = document.getElementById('ingredients-list');
+
+function bindCheckbox(li) {
+    const cb = li.querySelector('.ing-check');
+    if (!cb) return;
+    cb.addEventListener('change', (e) => {
+        li.classList.toggle('line-through', e.target.checked);
+        persistChecked();
+        updateCount();
+    });
+}
+
+if (addBtn && ingList) {
+    addBtn.addEventListener('click', () => {
+        const text = prompt('New ingredient:');
+        if (!text) return;
+        const li = document.createElement('li');
+        li.className = 'list-group-item';
+        li.innerHTML = `<label><input type="checkbox" class="ing-check"> ${text}</label>`;
+        ingList.appendChild(li);
+        bindCheckbox(li);
+        persistChecked();
+        updateCount();
+    });
+}
+
+// bind existing checkboxes
+document.querySelectorAll('#ingredients-list li').forEach(bindCheckbox);
