@@ -45,3 +45,35 @@ if (addBtn && ingList) {
 
 // bind existing checkboxes
 document.querySelectorAll('#ingredients-list li').forEach(bindCheckbox);
+
+const STORAGE_KEY = 'recipe-checked-v1';
+
+function persistChecked() {
+    const data = [];
+    document.querySelectorAll('#ingredients-list li').forEach(li => {
+        const label = li.textContent.trim();
+        const checked = li.classList.contains('line-through');
+        data.push({ label, checked });
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+}
+
+function restoreChecked() {
+    try {
+        const raw = localStorage.getItem(STORAGE_KEY);
+        if (!raw) return;
+        const data = JSON.parse(raw);
+        const items = Array.from(document.querySelectorAll('#ingredients-list li'));
+        data.forEach(({ label, checked }) => {
+            const match = items.find(li => li.textContent.trim() === label);
+            if (match) {
+                match.classList.toggle('line-through', checked);
+                const cb = match.querySelector('.ing-check');
+                if (cb) cb.checked = checked;
+            }
+        });
+    } catch { }
+}
+
+restoreChecked();
+updateCount && updateCount();
