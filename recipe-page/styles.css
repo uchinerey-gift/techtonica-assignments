@@ -134,3 +134,20 @@ li {
     display: table;
     clear: both;
 }
+/* better contrast and affordance */
+a {
+    color: #1f5fbf;
+}
+
+a:hover,
+a:focus {
+    color: #17498f;
+    text-decoration: underline;
+}
+
+/* subtle card look for list items */
+#ingredients-list .list-group-item,
+#instructions-list .list-group-item {
+    background: #fff;
+    border: 1px solid #e7e7e7;
+}
