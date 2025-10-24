@@ -152,4 +152,8 @@ h3 {
 .right {
     width: 600px;
     /* matches image/description width */
+}
+/* Commit 8: float left column */
+.left {
+    float: left;
 }Commit 1: extra tokens + base elements */
