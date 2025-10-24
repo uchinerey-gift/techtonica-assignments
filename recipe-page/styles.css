@@ -146,4 +146,10 @@ h3 {
     border-radius: var(--radius);
     box-shadow: var(--shadow);
     background: var(--card);
+}
+/* Commit 7: base column widths */
+.left,
+.right {
+    width: 600px;
+    /* matches image/description width */
 }Commit 1: extra tokens + base elements */
