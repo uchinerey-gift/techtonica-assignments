@@ -175,4 +175,17 @@ h3 {
     content: "";
     display: table;
     clear: both;
+}
+/* Commit 11: card style for columns */
+.left,
+.right {
+    background: var(--card);
+    border: 1px solid #eee;
+    border-radius: var(--radius);
+    padding: 1rem 1.25rem;
+    box-shadow: var(--shadow);
+}
+
+.left {
+    margin-bottom: 1rem;
 }Commit 1: extra tokens + base elements */
