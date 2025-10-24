@@ -163,4 +163,16 @@ h3 {
     /* per Phase 2 prompt */
     margin-left: 30px;
     /* gutter between columns */
+}
+/* Commit 10: columns wrapper + clearfix */
+.columns {
+    max-width: var(--max-content);
+    margin: 0 auto 2rem;
+    padding: 0 1rem;
+}
+
+.columns::after {
+    content: "";
+    display: table;
+    clear: both;
 }Commit 1: extra tokens + base elements */
