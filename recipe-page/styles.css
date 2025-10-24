@@ -225,4 +225,25 @@ button:focus {
         max-width: 100%;
     }
 }
-/* change to 8px/12px if needed */Commit 1: extra tokens + base elements */
+/* Commit 15: Back to Top button + reduced motion */
+#back-to-top {
+    position: fixed;
+    right: 16px;
+    bottom: 16px;
+    background: var(--accent);
+    color: #fff !important;
+    padding: 0.6rem 0.9rem;
+    border-radius: 999px;
+    box-shadow: var(--shadow);
+    font-weight: 600;
+}
+
+#back-to-top:hover {
+    filter: brightness(1.05);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}/* change to 8px/12px if needed */Commit 1: extra tokens + base elements */
