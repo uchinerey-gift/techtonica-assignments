@@ -98,3 +98,17 @@ li {
     font-size: 1rem;
     line-height: 1.65;
 }
+/* Phase 2: image matches 600px width, centered */
+#image img {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Phase 2: description matches image width */
+.description {
+    max-width: 600px;
+    margin: 0 auto;
+}
