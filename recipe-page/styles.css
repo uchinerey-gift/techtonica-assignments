@@ -120,4 +120,16 @@ h3 {
     font-weight: 600;
     font-size: clamp(1.1rem, 2vw, 1.35rem);
     color: var(--muted);
-}/* Commit 1: extra tokens + base elements */
+}/* 
+/* Commit 4: top wrapper + container */
+.top {
+    padding: 2rem 1rem 1rem;
+    max-width: var(--max-content);
+    margin: 0 auto;
+}
+
+.container {
+    max-width: var(--max-content);
+    margin: 0 auto;
+    padding: 0 1rem;
+}Commit 1: extra tokens + base elements */
