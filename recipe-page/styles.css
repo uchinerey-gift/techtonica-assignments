@@ -112,3 +112,25 @@ li {
     max-width: 600px;
     margin: 0 auto;
 }
+/* Phase 2: float-based two-column layout */
+#ingredients,
+#image {
+    float: left;
+    width: 600px;
+    /* aligns with image width */
+}
+
+#instructions {
+    float: left;
+    width: 600px;
+    /* same width as left column */
+    margin-left: 30px;
+    /* gap between columns */
+}
+
+/* clearfix so the container encloses floats */
+#app::after {
+    content: "";
+    display: table;
+    clear: both;
+}
