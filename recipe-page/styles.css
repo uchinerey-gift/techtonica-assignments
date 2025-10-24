@@ -188,4 +188,21 @@ h3 {
 
 .left {
     margin-bottom: 1rem;
+}
+/* Commit 12: list + focus polish */
+.left ul,
+.right ol {
+    padding-left: 1.25rem;
+}
+
+.left li,
+.right li {
+    margin: 0.35rem 0;
+}
+
+a:focus,
+button:focus {
+    outline: 3px solid #d8c8ff;
+    outline-offset: 2px;
+    border-radius: 6px;
 }Commit 1: extra tokens + base elements */
