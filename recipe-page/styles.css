@@ -61,13 +61,11 @@ li.line-through::after {
         font-size: 0.9em;
     }
 }
-/* Commit 1: extra tokens + base elements */
 :root {
     --accent: #7a42ff;
     --radius: 12px;
     --shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
     --max-content: 1230px;
-    /* 600 + 30 + 600 */
 }
 
 img {
@@ -84,7 +82,6 @@ a {
 a:hover {
     text-decoration: underline;
 }
-/* Commit 2: typography base */
 :root {
     --font-sans: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     --font-serif: "Playfair Display", Georgia, serif;
@@ -94,7 +91,6 @@ body {
     font-family: var(--font-sans);
     font-size: 16px;
 }
-/* Commit 3: headings */
 h1,
 h2,
 h3 {
@@ -120,8 +116,7 @@ h3 {
     font-weight: 600;
     font-size: clamp(1.1rem, 2vw, 1.35rem);
     color: var(--muted);
-}/* 
-/* Commit 4: top wrapper + container */
+}
 .top {
     padding: 2rem 1rem 1rem;
     max-width: var(--max-content);
@@ -133,13 +128,11 @@ h3 {
     margin: 0 auto;
     padding: 0 1rem;
 }
-/* Commit 5: constrain description */
 .description {
     max-width: 600px;
     margin: 0.75rem 0 1.25rem 0;
     color: var(--muted);
 }
-/* Commit 6: hero image sizing */
 .recipe-hero {
     max-width: 600px;
     margin: 0.5rem auto 1.25rem;
@@ -147,24 +140,19 @@ h3 {
     box-shadow: var(--shadow);
     background: var(--card);
 }
-/* Commit 7: base column widths */
 .left,
 .right {
     width: 600px;
-    /* matches image/description width */
 }
-/* Commit 8: float left column */
 .left {
     float: left;
 }
-/* Commit 9: float right column + gutter */
 .right {
     float: left;
-    /* per Phase 2 prompt */
+    
     margin-left: 30px;
-    /* gutter between columns */
+    
 }
-/* Commit 10: columns wrapper + clearfix */
 .columns {
     max-width: var(--max-content);
     margin: 0 auto 2rem;
@@ -176,7 +164,6 @@ h3 {
     display: table;
     clear: both;
 }
-/* Commit 11: card style for columns */
 .left,
 .right {
     background: var(--card);
@@ -189,7 +176,6 @@ h3 {
 .left {
     margin-bottom: 1rem;
 }
-/* Commit 12: list + focus polish */
 .left ul,
 .right ol {
     padding-left: 1.25rem;
@@ -206,11 +192,9 @@ button:focus {
     outline-offset: 2px;
     border-radius: 6px;
 }
-/* Commit 13: top alignment tweak */
 .left {
     margin-top: 0;
 }
-/* Commit 14: responsive layout */
 @media (max-width: 1280px) {
 
     .left,
@@ -225,7 +209,6 @@ button:focus {
         max-width: 100%;
     }
 }
-/* Commit 15: Back to Top button + reduced motion */
 #back-to-top {
     position: fixed;
     right: 16px;
@@ -246,4 +229,4 @@ button:focus {
     html {
         scroll-behavior: auto;
     }
-}/* change to 8px/12px if needed */Commit 1: extra tokens + base elements */
+}
